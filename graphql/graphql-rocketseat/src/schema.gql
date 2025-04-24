@@ -4,8 +4,13 @@
 # -----------------------------------------------
 
 type Appointment {
+  customer: Customer!
   endsAt: DateTimeISO!
   startsAt: DateTimeISO!
+}
+
+type Customer {
+  name: String!
 }
 
 """
@@ -18,7 +23,7 @@ type Mutation {
 }
 
 type Query {
-  helloWorld: String!
+  appointments: [Appointment!]!
 }
 
 input createAppointmentInput {
