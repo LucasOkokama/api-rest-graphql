@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import { useMutation, useQuery, gql } from "@apollo/client";
 
@@ -21,23 +22,48 @@ const GET_USER_BY_ID = gql`
   }
 `;
 
+const CREATE_USER = gql`
+  mutation CreateUser($name: String!, $age: Int!, $isMarried: Boolean!) {
+    createUser(name: $name, age: $age, isMarried: $isMarried) {
+      name
+    }
+  }
+`;
+
 function App() {
+  const [newUser, setNewUser] = useState({});
+
   const {
     data: getUsersData,
     error: getUsersError,
     loading: getUsersLoading,
   } = useQuery(GET_USERS);
 
-  const {
-    data: getUserByIdData,
-    error: getUserByIdError,
-    loading: getUserByIdLoading,
-  } = useQuery(GET_USER_BY_ID, {
-    variables: { id: "2" },
-  });
+  const { data: getUserByIdData, loading: getUserByIdLoading } = useQuery(
+    GET_USER_BY_ID,
+    {
+      variables: { id: "2" },
+    }
+  );
+
+  const [createUser] = useMutation(CREATE_USER);
 
   if (getUsersLoading) return <p>Data loading...</p>;
   if (getUsersError) return <p>Error: {error.message}</p>;
+
+  const handleCreateUser = async () => {
+    try {
+      await createUser({
+        variables: {
+          name: newUser.name,
+          age: newUser.age,
+          isMarried: newUser.isMarried,
+        },
+      });
+    } catch (error) {
+      console.error("Erro ao criar o usuário:", error);
+    }
+  };
 
   return (
     <div id="container">
@@ -64,6 +90,52 @@ function App() {
             <p>Is married: {user.isMarried ? "Yes" : "No"}</p>
           </div>
         ))}
+      </div>
+
+      <br />
+      <br />
+
+      <div>
+        <input
+          placeholder="Name..."
+          type="text"
+          onChange={(e) =>
+            setNewUser((prev) => ({ ...prev, name: e.target.value }))
+          }
+        />
+        <br />
+        <input
+          placeholder="Age..."
+          type="number"
+          onChange={(e) =>
+            setNewUser((prev) => ({ ...prev, age: Number(e.target.value) }))
+          }
+        />
+
+        <br />
+        <br />
+
+        <p>Are you married?</p>
+        <div
+          onChange={(e) =>
+            setNewUser((prev) => ({
+              ...prev,
+              isMarried: e.target.value === "Yes",
+            }))
+          }
+        >
+          <input type="radio" id="no" name="ismarried" value="No" />
+          <label htmlFor="no" style={{ marginRight: 15 }}>
+            No
+          </label>
+          <input type="radio" id="yes" name="ismarried" value="Yes" />
+          <label htmlFor="yes">Yes</label>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <button onClick={handleCreateUser}>Create User</button>
       </div>
     </div>
   );

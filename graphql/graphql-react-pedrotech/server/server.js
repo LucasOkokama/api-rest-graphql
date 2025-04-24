@@ -1,5 +1,5 @@
 import { ApolloServer } from "@apollo/server";
-import { startStandaloneServer } from "@apollo/server/standalone"
+import { startStandaloneServer } from "@apollo/server/standalone";
 
 const users = [
   { id: "1", name: "John Doe", age: 30, isMarried: true },
@@ -8,12 +8,12 @@ const users = [
 ];
 
 const typeDefs = `
-  type Query{
+  type Query {
     getUsers: [User]
     getUserById(id: ID!): User
   }
 
-  type Mutation{
+  type Mutation {
     createUser(
       name: String!,
       age: Int!,
@@ -21,49 +21,57 @@ const typeDefs = `
     ): User
   }
 
-  type User{
-    id: ID
-    name: String
-    age: Int
+  type User {
+    id: ID!
+    name: String!
+    age: Int!
     isMarried: Boolean
   }
-`
+`;
 
 const resolvers = {
   Query: {
     getUsers: () => {
-      return users
+      return users;
     },
 
     getUserById: (_, args) => {
-      const id = args.id
-      return users.find((user) => id === user.id)
-    }
+      const id = args.id;
+      return users.find((user) => id === user.id);
+    },
   },
+
   Mutation: {
     createUser: (_, args) => {
-      const { name, age, isMarried } = args
+      console.log("Recebido na mutation:", args);
+      const { name, age, isMarried } = args;
 
       const newUser = {
         id: (users.length + 1).toString(),
         name,
         age,
-        isMarried
-      }
+        isMarried,
+      };
 
-      users.push(newUser)
-      return newUser
-    }
-  }
+      users.push(newUser);
+      return newUser;
+    },
+  },
+};
+
+async function startServer() {
+  const server = new ApolloServer({
+    typeDefs,
+    resolvers,
+  });
+
+  const { url } = await startStandaloneServer(server, {
+    listen: { port: 4000 },
+  });
+
+  console.log(`Server running at: ${url}`);
 }
 
-const server = new ApolloServer({
-  typeDefs,
-  resolvers
-})
-
-const { url } = await startStandaloneServer(server, {
-  listen: { port: 4000 }
-})
-
-console.log(`Server running at: ${url}`)
+startServer().catch((error) => {
+  console.error("Error starting server:", error);
+});
