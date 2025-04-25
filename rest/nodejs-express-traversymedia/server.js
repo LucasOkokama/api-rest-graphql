@@ -1,18 +1,11 @@
-const express = require("express")
-const path = require("path")
+import express from "express"
+import posts from "./routes/posts.js"
+const port = process.env.PORT || 8080
 
 const app = express();
 
-let posts = [
-  { "id": 1, "title": "Post one" },
-  { "id": 2, "title": "Post two" },
-  { "id": 3, "title": "Post three" }
-]
+// Routes
+app.use("/api/posts", posts)
 
-app.use(express.static(path.join(__dirname, "public")))
 
-app.get("/api/posts", (req, res) => {
-  res.json(posts)
-})
-
-app.listen(8000, () => console.log(`Server is running on port 8000`))
+app.listen(port, () => console.log(`Server is running on port ${port}`))
