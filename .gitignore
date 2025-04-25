@@ -1,52 +1,63 @@
 # Logs
+
 logs
-*.log
-npm-debug.log*
+_.log
+npm-debug.log_
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
 # Runtime data
-*.local
+
+\*.local
 
 # Dependency directories
+
 node_modules/
 
 # Build output
+
 dist/
 dist-ssr/
 build/
 out/
-.next/         # Next.js
-.angular/      # Angular
-.esbuild/      # esbuild
-.cache/        # Vite, Nuxt, others
-.vite/         # Vite-specific
+.next/ # Next.js
+.angular/ # Angular
+.esbuild/ # esbuild
+.cache/ # Vite, Nuxt, others
+.vite/ # Vite-specific
 
 # OS-specific files
-.DS_Store      # macOS
-Thumbs.db      # Windows
+
+.DS_Store # macOS
+Thumbs.db # Windows
 
 # IDE and Editor folders
+
 .vscode/
 !.vscode/extensions.json
 .idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+_.suo
+_.ntvs\*
+_.njsproj
+_.sln
+\*.sw?
 
 # Lockfiles (optional – use based on team preference)
+
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
 # Temporary or misc files
-*.tmp
-*.log
+
+_.tmp
+_.log
 
 # Test and Storybook outputs
-coverage/           # Code coverage reports
-storybook-static/   # Storybook static build
+
+coverage/ # Code coverage reports
+storybook-static/ # Storybook static build
+
+.env
