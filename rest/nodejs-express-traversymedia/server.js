@@ -4,6 +4,10 @@ const port = process.env.PORT || 8080
 
 const app = express();
 
+// Body parser middleware
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
+
 // Routes
 app.use("/api/posts", posts)
 
