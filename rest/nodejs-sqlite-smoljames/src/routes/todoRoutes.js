@@ -26,6 +26,13 @@ router.put("/:id", (req, res) => {
   res.json({ message: "Todo completed" });
 });
 
-router.delete("/:id", (req, res) => {});
+router.delete("/:id", (req, res) => {
+  const { id } = req.params;
+  const deletedTodo = db.prepare(
+    `DELETE FROM todos WHERE id = ? AND user_id = ?`
+  );
+  deletedTodo.run(id, req.userID);
+  res.json({ meessage: "Todo deleted successfully" });
+});
 
 export default router;
