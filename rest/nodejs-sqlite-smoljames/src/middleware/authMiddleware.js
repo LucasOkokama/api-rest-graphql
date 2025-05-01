@@ -8,9 +8,12 @@ const authMiddleware = (req, res, next) => {
   }
 
   let token = authHeader.split(" ");
+  console.log(token);
 
   if (token[0] === "Bearer" && token.length === 2) {
     token = token[1];
+  } else {
+    token = token[0];
   }
 
   jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
