@@ -61,3 +61,5 @@ coverage/ # Code coverage reports
 storybook-static/ # Storybook static build
 
 .env
+
+generated/
