@@ -4,7 +4,7 @@
 This repository was created as a space to practice API development using both REST and GraphQL models, with Node.js as the main technology. The goal is to consolidate knowledge through practical examples, exploring different approaches and design patterns applied to modern API construction. The repository also aims to compare REST and GraphQL styles, analyzing their advantages, limitations, and ideal use cases. Additionally, it serves as a structured and organized archive for future reference, fostering a deeper understanding of API development and best practices within the JavaScript ecosystem.
 
 # Tech Stack
-The project utilizes both REST and GraphQL APIs built with Node.js, providing a flexible foundation for testing different API architectures and development patterns. While the main focus is on API design and functionality, various databases are integrated into the environment to support testing scenarios. These databases are not the core of the project but are essential for simulating real-world data interactions. Docker is employed to containerize and manage the database services, ensuring a consistent and isolated environment for testing and development.
+The project utilizes both REST and GraphQL APIs built with Node.js, providing a flexible foundation for testing different API architectures and development patterns. While the main focus is on API design and functionality, various databases are integrated into the environment to support testing scenarios. These databases are not the core of the project but are essential for simulating real-world data interactions.
 
 <table align="center">
     <tr>
@@ -21,12 +21,11 @@ The project utilizes both REST and GraphQL APIs built with Node.js, providing a 
             Languages
         </th>
         <td>
-            <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
             <img alt="Typescript" src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" />
         </td>
         <td>
-            <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" />
-            <img alt="Python" src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" />
+            <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+            <img alt="GraphQL" src="https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white" />
         </td>
     </tr>
     <tr>
@@ -37,34 +36,29 @@ The project utilizes both REST and GraphQL APIs built with Node.js, providing a 
             <img alt="React" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
         </td>
         <td>
-            <img alt="Spring Boot" src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" />
+            <img alt="TypeGraphQL" src="https://img.shields.io/badge/-TypeGraphQL-%23C04392?style=for-the-badge"/>
+            <img alt="Apollo GraphQL" src="https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql" />
         </td>
     </tr>
     <tr>
         <th>
-            Unit Testing
+            Database
         </th>
+        <td></td>
         <td>
-            <img alt="Jest" src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white" />
-            <img alt="Vitest" src="https://img.shields.io/badge/-Vitest-252529?style=for-the-badge&logo=vitest&logoColor=FCC72B" />
-            <img alt="Cypress" src="https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e" />
-        </td>
-        <td>
-            <img alt="Pytest" src="https://img.shields.io/badge/pytest-%23ffffff.svg?style=for-the-badge&logo=pytest&logoColor=2f9fe3" />
-            <img alt="JUnit" src="https://img.shields.io/badge/JUnit-_?style=for-the-badge&logo=junit5&logoColor=%23fff&color=%23DC524A" />
-            <img alt="xUnit" src="https://img.shields.io/badge/xUnit-_?style=for-the-badge&logo=x&logoColor=%23fff&color=%23000" />
-            <img alt="Selenium" src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white" />
+            <img alt="SQLite" src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white" />
+            <img alt="Postgres" src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" />
         </td>
     </tr>
     <tr>
         <th>
-            IDE / Editor
+            Tools
         </th>
+        <td></td>
         <td>
             <img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white" />
-        </td>
-        <td>
-            <img alt="IntelliJ IDEA" src="https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white" />
+            <img alt="Docker" src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" />
+            <img alt="Node.js" src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" />
         </td>
     </tr>
 </table>
