@@ -42,6 +42,15 @@ The project utilizes both REST and GraphQL APIs built with Node.js, providing a 
     </tr>
     <tr>
         <th>
+            Library
+        </th>
+        <td></td>
+        <td>
+            <img alt="Prisma" src="https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white"/>
+        </td>
+    </tr>
+    <tr>
+        <th>
             Database
         </th>
         <td></td>
