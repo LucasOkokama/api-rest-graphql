@@ -83,37 +83,37 @@ The project utilizes both REST and GraphQL APIs built with Node.js, providing a 
 # References
 <table align="center">
     <tr>
-        <th></th>
+        <th>Creator</th>
         <th>Video</th>
         <th>Tech</th>
         <th>GitHub Repo</th>
     </tr>
     <tr>
-        <th>1.</th>
+        <th>Rocketseat</th>
         <th><a href="https://www.youtube.com/watch?v=1dz48pReq_c">GraphQL no Node.js do ZERO criando 2 apps completos</a></th>
         <th>GraphQL | Apollo Server | TypeGraphQL | Node.js</th>
         <th><a href=""></a></th>
     </tr>
     <tr>
-        <th>2.</th>
+        <th>PedroTech</th>
         <th><a href="https://www.youtube.com/watch?v=BNYwj0ZvU1U">FullStack GraphQL React Tutorial - Learn Apollo Client / Apollo Server For Beginners</a></th>
         <th>GraphQL | Apollo Server | Node.js | React</th>
         <th><a href="https://github.com/machadop1407/fullstack-graphql-crud-tutorial">fullstack-graphql-crud-tutorial</a></th>
     </tr>
     <tr>
-        <th>3.</th>
+        <th>PedroTech</th>
         <th><a href="https://www.youtube.com/watch?v=yqWzCV0kU_c">Learn GraphQL in 4 Hours - From Beginner to Expert</a></th>
         <th>GraphQL | Apollo Server | Node.js</th>
         <th><a href="https://github.com/machadop1407/graphql-full-course">graphql-full-course</a></th>
     </tr>
     <tr>
-        <th>4.</th>
+        <th>Traversy Media</th>
         <th><a href="https://www.youtube.com/watch?v=CnH3kAXSrmU">Express Crash Course</a></th>
         <th>Express | Node.js</th>
         <th><a href="https://github.com/bradtraversy/express-crash/">express-crash</a></th>
     </tr>
     <tr>
-        <th>5.</th>
+        <th>Smoljames</th>
         <th><a href="https://www.youtube.com/watch?v=9BD9eK9VqXA">Backend Full Course | NodeJS ExpressJS PostgreSQL Prisma & Docker</a></th>
         <th>Express | Node.js | Prisma | Docker | PostgreSQL</th>
         <th><a href="https://github.com/jamezmca/backend-full-course">backend-full-course</a></th>
